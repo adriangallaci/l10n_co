@@ -128,7 +128,6 @@ class ResPartner(models.Model):
     @api.one
     @api.constrains("vat")
     def check_vat(self):
-        self.vat.strip()
         if self.vat:
             if self.search(
                     [
